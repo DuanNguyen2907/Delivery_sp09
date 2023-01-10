@@ -1,0 +1,15 @@
+.detail-card {
+    position: fixed;
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEE1E6FF;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}

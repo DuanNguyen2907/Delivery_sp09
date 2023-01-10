@@ -1,0 +1,20 @@
+.MainDash {
+    display: block;
+    justify-content: flex-start;
+}
+
+.Top {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+.Statistic {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .MainDash {
+        justify-content: flex-start;
+        margin-top: 2rem;
+    }
+}

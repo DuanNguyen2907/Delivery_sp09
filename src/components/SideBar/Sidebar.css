@@ -1,0 +1,88 @@
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #323842FF;
+    transition: all 300ms ease;
+    width: 20%;
+    height: 100% !important;
+}
+
+.logo {
+    display: flex;
+    font-weight: bold;
+    font-size: 22px;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 8%;
+    color: white;
+    background-color: #BCC1CAFF;
+}
+
+.logo>img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.logo>span>span {
+    color: rgb(213, 130, 14);
+}
+
+/* menu */
+.menu {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    position: relative;
+    transition: all 300ms ease;
+    font-size: 16px;
+    color: white;
+}
+
+.menuItem:hover {
+    cursor: pointer;
+}
+
+.active {
+    background: #17A948FF;
+    margin-left: 0;
+}
+
+.active::before {
+    content: '';
+    width: 8px;
+    height: 100%;
+    background: rgb(4, 122, 43);
+    margin-right: calc(1rem - 8px);
+}
+
+.menu .menuItem:last-child {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;    
+}
+
+.pageController {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    .menuItem>span{
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+}

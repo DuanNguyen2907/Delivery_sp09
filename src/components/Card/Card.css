@@ -1,0 +1,82 @@
+.compactCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    width: 8rem;
+    border-radius:0.7rem;
+    color: #171A1FFF;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #DEE1E6FF;
+}
+
+.compactCard>span:nth-child(1){
+    font-weight: bold;
+    font-size:50px;
+}
+
+.compactCard>span:nth-child(3){
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+
+/* radial */
+
+/* detail */
+
+.detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.detail>span:nth-child(2) {
+    font-size: 22px ;
+    font-weight: bold;
+}
+
+.detail>span:nth-child(3) {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+    .compactCard {
+        height: 8rem;
+    }
+}
+
+/* revenue card */
+
+.RevenueCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #DEE1E6FF;
+  height: 10rem;
+  border-radius:0.7rem;
+  position: relative;
+  width: 80%;
+}
+
+.Total, 
+.days {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45%;
+    background-color: #F3F4F6FF;
+    border-radius: 8px;
+    margin: 4px 4px;
+}
+
+.Total>h3,.Total>span ,.days>h3 ,.days>span {
+    padding: 10px;
+    font-weight: bold;
+}

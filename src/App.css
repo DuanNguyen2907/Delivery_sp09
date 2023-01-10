@@ -1,0 +1,7 @@
+.App {
+  background: #F8F9FAFF;
+  height: 100vh;
+  display: grid;
+  font-family: 'Poppins', sans-serif;
+  grid-template-columns: 20% auto;
+}
