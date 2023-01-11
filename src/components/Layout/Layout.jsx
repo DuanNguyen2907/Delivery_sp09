@@ -7,8 +7,8 @@ import {Routes, Route} from 'react-router-dom'
 const Layout = () => {
   return (
     <div>
+    <SearchAria/>
       <div className="Layout">
-        <SearchAria/>
         <Routes className='Main'>
             <Route path='/' element=<ShipmentsTable/>/>
         </Routes>
