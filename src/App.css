@@ -3,5 +3,5 @@
   height: 100vh;
   display: grid;
   font-family: 'Poppins', sans-serif;
-  grid-template-columns: 20% auto;
+  grid-template-columns: 15% auto;
 }
