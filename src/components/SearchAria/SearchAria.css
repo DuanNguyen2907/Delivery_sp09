@@ -2,19 +2,19 @@
     position: relative;
     width: 100%;
     display: flex;
-    height: 60px;
+    height: 51.18px;
     background-color: #DEE1E6FF;
-    justify-content: center;
     align-items: center;
 }
 
 .Search {
-    height: 50%;
-    width: 40%;
-    background-color: rgb(183, 186, 190);
-    border-radius: 50px;
+    height: 60%;
+    width: 20%;
+    background-color: #F8F9FAFF;
+    left: 0;
+    border-radius: 8px;
     display: grid;
-    grid-template-columns: 90% auto;
+    grid-template-columns: 95% auto;
     justify-content: center;
     align-items: center;
 }
@@ -23,15 +23,15 @@
     height: 50%;
     border: none;
     outline: none;
-    background-color: rgb(183, 186, 190);
+    background-color: #F8F9FAFF;
     box-sizing: border-box;
 }
 
 .User {
-    height: 50px;
-    width: 50px;
-    background-color: blue;
+    height: 35px;
+    width: 35px;
+    background-color: #17A948FF;
     border-radius: 50%;
     position: absolute;
-    right: 4rem;
+    right: 15px;
 }
