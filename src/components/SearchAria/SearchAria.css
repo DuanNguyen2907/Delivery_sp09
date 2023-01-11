@@ -12,9 +12,10 @@
     width: 20%;
     background-color: #F8F9FAFF;
     left: 0;
+    margin-left: 5%;
     border-radius: 8px;
     display: grid;
-    grid-template-columns: 95% auto;
+    grid-template-columns: 90% auto;
     justify-content: center;
     align-items: center;
 }
