@@ -4,12 +4,9 @@ import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
       <Sidebar />
-      <div className="App">
-        <div></div>
-        <Layout/>
-      </div>
+      <Layout/>
 
       </div>
     // </div>
