@@ -12,6 +12,12 @@ const SearchAria = (props) => {
   const handleClick = () => {
     props.onDataChange(searchTerm);
   };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      props.onDataChange(searchTerm);
+    }
+  };
   return (
     <div className="SearchAria">
       <div className="Search">
@@ -20,6 +26,7 @@ const SearchAria = (props) => {
           value={searchTerm}
           placeholder="Search"
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
         ></input>
         <div className="Search-Button">
           <UilSearchAlt onClick={handleClick} />

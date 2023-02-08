@@ -14,10 +14,10 @@ import MenuItem from "@mui/material/MenuItem";
 
 import MainDash from "../MainDash/MainDash";
 
-// const DateTime = (time) => {
-//   var date = time.split("T");
-//   return date[0];
-// };
+const DateTime = (time) => {
+  var date = time.split("T");
+  return date[0];
+};
 
 const options = [
   { id: 1, value: "chưa giao hàng", label: "chưa giao hàng" },
@@ -38,12 +38,11 @@ const sortOptions = [
 
 export default function ShipmentsTable(props) {
   let param = props.shipments;
-  let result = props.result;
   let onChange = props.onDataChange;
   return (
     <div className="Shipments">
       <MainDash />
-      <BasicTable shipment={param} result={result} onChange={onChange} />
+      <BasicTable shipment={param} onChange={onChange} />
     </div>
   );
 }
@@ -57,7 +56,6 @@ function BasicTable(props) {
     onchange(event.target.value);
   };
   let shipment = props.shipment;
-  let result = props.result;
   let onchange = props.onChange;
   let shipments = [];
   if (shipment !== undefined) {
@@ -67,8 +65,6 @@ function BasicTable(props) {
       shipments = props.shipment;
     }
   }
-  console.log("shipmetsresult:", shipments);
-  console.log("result2:", result);
   return (
     <div className="Table">
       <h2>ORDER LIST</h2>
@@ -111,7 +107,7 @@ function BasicTable(props) {
                 <TableCell component="th" scope="row">
                   {row.orderId}
                 </TableCell>
-                <TableCell align="left">{row.createAt}</TableCell>
+                <TableCell align="left">{DateTime(row.createAt)}</TableCell>
                 <TableCell align="left">{row.receiver.name}</TableCell>
                 <TableCell align="left">{row.fee}</TableCell>
                 <TableCell align="left">
@@ -133,7 +129,6 @@ function BasicTable(props) {
                   align="left"
                   className="Details"
                   onClick={() => {
-                    debugger;
                     setCardDetail(row);
                     setDetails(true);
                   }}
