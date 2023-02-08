@@ -8,7 +8,6 @@ import axios from "axios";
 
 const Layout = () => {
   const [shipments, setShipments] = useState([]);
-  const [result, setResult] = useState();
   const [searchData, setSearchData] = useState("");
   const [sortData, setSortData] = useState("");
 
@@ -21,13 +20,16 @@ const Layout = () => {
   };
 
   let url = "";
-  if (searchData === "" && sortData === "") {
+  if (
+    (searchData === "" && sortData === "") ||
+    (searchData === "" && sortData === 6)
+  ) {
     url =
       "https://delivery-module-production.up.railway.app/api/shipping_order";
-  } else if (searchData === "" && sortData === 6) {
-    url =
-      "https://delivery-module-production.up.railway.app/api/shipping_order";
-  } else if (searchData === "" && sortData !== 0 && sortData !== 6) {
+  } else if (
+    (searchData === "" && sortData !== "" && sortData !== 6) ||
+    (searchData !== "" && sortData !== "" && sortData !== 6)
+  ) {
     url =
       "https://delivery-module-production.up.railway.app/api/shipping_order/group/status/" +
       sortData;
@@ -46,13 +48,11 @@ const Layout = () => {
       .then((res) => {
         console.log(res.data);
         setShipments(res.data.data);
-        setResult(res.data.result.responseCode);
       })
       .catch((err) => {
         console.log(err);
       });
   }, [url]);
-  console.log("sort:", typeof sortData);
   return (
     <div>
       <SearchAria onDataChange={handleDataChange} />
@@ -62,7 +62,6 @@ const Layout = () => {
             path="/"
             element=<ShipmentsTable
               shipments={shipments}
-              result={result}
               onDataChange={handleSortDataChange}
             />
           />
